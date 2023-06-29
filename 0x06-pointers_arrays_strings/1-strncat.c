@@ -17,7 +17,7 @@ char *_strncat(char *dest, char *src, int n)
 	c = 0;
 
 	/*find size of dest array*/
-	while (desct[c])
+	while (dest[c])
 		c++;
 
 	/**
