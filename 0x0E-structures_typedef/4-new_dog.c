@@ -3,9 +3,7 @@
 
 /**
  * _strlen - a function that gets a length of string
- *
  * @str: the string to get the length
- *
  * Return: length of @str
 */
 
@@ -19,8 +17,7 @@ int _strlen(const char *str)
 }
 
 /**
- * _strcopy - a function that returns @dest with a string from @src
- *
+ * _strcopy - a function that returns @dest with a copy of a string from @src
  * @src: string to copy
  * @dest: copy string to here
  * Return: @dest
@@ -39,13 +36,10 @@ char *_strcopy(char *dest, char *src)
 
 /**
  * new_dog - a function that creates a new dog
- *
  * @name: name of dog
  * @age: age of dog
  * @owner: dog owner
- *
- * Return: struct pointer dog
- *         NULL if funtion fails
+ * Return: struct pointer dog NULL if function fails
 */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -57,6 +51,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	dog = (dog_t *) malloc(sizeof(dog_t));
+	if (dog == NULL)
 		return (NULL);
 
 	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
@@ -66,7 +61,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	dog->name = malloc(sizeof(char) * (_strlen(owner) + 1));
+	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if ((*dog).owner == NULL)
 	{
 		free(dog->name);
