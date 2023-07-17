@@ -19,14 +19,14 @@ int _strlen(const char *str)
 }
 
 /**
- * _strlen - a function that returns @dest with a string from @src
+ * _strcopy - a function that returns @dest with a string from @src
  *
  * @src: string to copy
  * @dest: copy string to here
  * Return: @dest
 */
 
-char *_stcopy(char *dest, char *src)
+char *_strcopy(char *dest, char *src)
 {
 	int i;
 
